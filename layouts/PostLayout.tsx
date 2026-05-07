@@ -95,7 +95,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
             </dl>
             <div className="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700">
               <div className="prose dark:prose-invert max-w-none pt-10 pb-8">{children}</div>
-              
+
               {siteMetadata.comments && (
                 <div
                   className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300"
@@ -146,12 +146,12 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </div>
               <div className="pt-4 xl:pt-8">
                 <Link
-  href="/home"
-  className="text-orange-500 hover:text-orange-400"
-  aria-label="返回主页"
->
-  &larr; 返回主页
-</Link>
+                  href="/home"
+                  className="text-orange-500 hover:text-orange-400"
+                  aria-label="返回主页"
+                >
+                  &larr; 返回主页
+                </Link>
               </div>
             </footer>
           </div>

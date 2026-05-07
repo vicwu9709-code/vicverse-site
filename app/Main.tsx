@@ -6,7 +6,15 @@ import NewsletterForm from 'pliny/ui/NewsletterForm'
 
 const MAX_DISPLAY = 4
 
-export default function Home({ posts }: { posts: any[] }) {
+type Post = {
+  slug: string
+  date: string
+  title: string
+  summary?: string
+  tags: string[]
+}
+
+export default function Home({ posts }: { posts: Post[] }) {
   return (
     <>
       <nav className="mb-12 flex items-center justify-between border-b border-gray-800 pb-6">
