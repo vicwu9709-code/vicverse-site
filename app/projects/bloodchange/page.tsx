@@ -2,9 +2,9 @@ import Link from '@/components/Link'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 
-const TAG = 'music'
+const TAG = 'vicverse'
 
-export default function MusicPage() {
+export default function BloodchangePage() {
   const posts = allCoreContent(sortPosts(allBlogs)).filter((post) =>
     post.tags?.includes(TAG)
   )
@@ -13,15 +13,15 @@ export default function MusicPage() {
     <main className="min-h-screen bg-black px-6 py-16 text-white">
       <div className="mx-auto max-w-4xl">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-          音乐分析
+          换血
         </h1>
 
         <p className="mt-3 text-sm text-blue-400 sm:text-base">
-          Music Analysis
+          Vicverse Updates
         </p>
 
         <p className="mt-8 text-lg leading-8 text-gray-300">
-          记录我对音乐、歌词、专辑、情绪结构与作品表达方式的理解。
+          这里记录 Vicverse 的建设、重构、部署、问题修复与每一次结构更新。
         </p>
 
         <div className="mt-12 space-y-8">

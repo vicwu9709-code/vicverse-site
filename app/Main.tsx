@@ -165,6 +165,23 @@ export default function Home({ posts }: { posts: Post[] }) {
             </Link>
           </div>
         </section>
+                <section>
+          <div className="mb-6">
+            <h2 className="text-2xl font-extrabold text-white sm:text-3xl">换血</h2>
+            <p className="mt-2 text-sm text-blue-400">Vicverse Updates</p>
+          </div>
+          <div className="space-y-3 text-gray-300">
+            <p>换血！换血！换血！换血！换血！换血！换血！换血！换血！换血！</p>
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/projects/bloodchange"
+              className="rounded-full bg-orange-500 px-6 py-2 font-bold text-white transition hover:bg-orange-400"
+            >
+              查看全部
+            </Link>
+          </div>
+        </section>
       </div>
 
       <div className="mt-24 border-t border-gray-800 pt-16">
