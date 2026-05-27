@@ -1,61 +1,13 @@
-import Link from '@/components/Link'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
-import { allBlogs } from 'contentlayer/generated'
-
-const TAG = 'underwater'
+import TopicPage from '../TopicPage'
 
 export default function UnderwaterPage() {
-  const posts = allCoreContent(sortPosts(allBlogs)).filter((post) =>
-    post.tags?.includes(TAG)
-  )
-
   return (
-    <main className="min-h-screen bg-black px-6 py-16 text-white">
-      <div className="mx-auto max-w-4xl">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-          水下机器人项目
-        </h1>
-
-        <p className="mt-3 text-sm text-blue-400 sm:text-base">
-          Underwater Robotics
-        </p>
-
-        <p className="mt-8 text-lg leading-8 text-gray-300">
-          这里将整理我关于水下机器人方向的日志、学习记录、结构分析与实践过程。
-        </p>
-
-        <div className="mt-12 space-y-8">
-          {posts.length === 0 ? (
-            <p className="text-gray-400">
-              这个栏目下暂时还没有文章。
-            </p>
-          ) : (
-            posts.map((post) => (
-              <article
-                key={post.slug}
-                className="border-b border-gray-800 pb-8"
-              >
-                <p className="text-sm text-gray-500">{post.date}</p>
-
-                <h2 className="mt-2 text-2xl font-bold">
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="transition hover:text-orange-500"
-                  >
-                    {post.title}
-                  </Link>
-                </h2>
-
-                {post.summary && (
-                  <p className="mt-3 leading-7 text-gray-300">
-                    {post.summary}
-                  </p>
-                )}
-              </article>
-            ))
-          )}
-        </div>
-      </div>
-    </main>
+    <TopicPage
+      tag="underwater"
+      title="水下机器人"
+      eyebrow="Underwater Robotics"
+      description="Vicverse 的主线专题。这里聚合水下机器人、海洋探索、结构分析和工程学习相关的日志。"
+      statement="目标不是把资料堆起来，而是把一个长期方向拆成能持续推进的学习地图。"
+    />
   )
 }

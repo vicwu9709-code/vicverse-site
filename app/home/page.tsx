@@ -1,9 +1,5 @@
-import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
-import { allBlogs } from 'contentlayer/generated'
-import Main from '../Main'
+import { redirect } from 'next/navigation'
 
-export default async function HomePage() {
-  const sortedPosts = sortPosts(allBlogs)
-  const posts = allCoreContent(sortedPosts)
-  return <Main posts={posts} />
+export default function HomePage() {
+  redirect('/')
 }
